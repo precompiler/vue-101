@@ -3,10 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Hello</title>
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
     <div id="hello">
         <h1>Hello {{msg}}</h1>
+    </div>
+
+    <div id="profile">
+        <img v-bind:class="gender" v-bind:src="picture" />
+        <h1>{{firstName}} {{lastName}}</h1>
+        <h3>Email: {{email}}</h3>
+        <h3>Address: {{street}}</h3>
+        <button :class="gender" v-on:click="nextUser()">Next User</button>
     </div>
     <!-- order is important, js needs to be after div-->
     <script src="https://unpkg.com/vue@3.0.6"></script>
